@@ -47,12 +47,12 @@ function Dashboard() {
       </Grid>
 
       {/* Recent Activities */}
-      <Grid container justifyContent="space-between" mt={4}>
+      <Grid container mt={4}>
         <RecentActivities />
       </Grid>
 
       {/* Chart */}
-      <Grid container justifyContent="space-between" mt={4}>
+      <Grid container mt={4}>
         <DashboardChart />
       </Grid>
     </Container>
