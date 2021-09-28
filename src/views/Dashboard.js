@@ -1,4 +1,4 @@
-import { Container, Grid, Paper } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import DashboardChart from "../components/dashboard/DashboardChart";
 import DisplayCount from "../components/dashboard/DisplayCount";
 import RecentActivities from "../components/dashboard/RecentActivities";
@@ -52,7 +52,7 @@ function Dashboard() {
       </Grid>
 
       {/* Chart */}
-      <Grid container mt={4}>
+      <Grid container my={4}>
         <DashboardChart />
       </Grid>
     </Container>

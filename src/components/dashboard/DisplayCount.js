@@ -1,5 +1,5 @@
-import { Grid, Paper, Typography } from "@mui/material";
-import { styled, alpha } from "@mui/system";
+import { Typography } from "@mui/material";
+import { styled } from "@mui/system";
 import React from "react";
 
 const BoxDisplay = styled("div")(({ theme }) => ({
