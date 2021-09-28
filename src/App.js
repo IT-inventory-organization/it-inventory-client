@@ -1,10 +1,5 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom';
-import Dashboard from './components/Dashboard.js';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Dashboard from "./views/Dashboard.js";
 
 function App() {
   return (
