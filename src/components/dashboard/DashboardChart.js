@@ -9,12 +9,7 @@ function DashboardChart() {
     datasets: [
       {
         data: [12, 19, 3, 5],
-        backgroundColor: [
-          "rgba(255, 99, 132, 0.8)",
-          "rgba(54, 162, 235, 0.8)",
-          "rgba(255, 206, 86, 0.8)",
-          "rgba(75, 192, 192, 0.8)",
-        ],
+        backgroundColor: ["#3CB774", "#5682FF", "#DE3D33", "#F9B800"],
         borderWidth: 1,
       },
     ],
