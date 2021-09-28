@@ -1,14 +1,11 @@
 import {
-  Typography,
   Table,
   TableBody,
   TableCell,
   TableContainer,
   TableHead,
   TableRow,
-  Paper,
 } from "@mui/material";
-import {} from "@mui/system";
 import React from "react";
 import PillBadge from "../PillBadge";
 import WrapSection from "../WrapSection";

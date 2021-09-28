@@ -1,7 +1,7 @@
 import { Container, Grid, Paper } from "@mui/material";
-import DashboardChart from "./dashboard/DashboardChart";
-import DisplayCount from "./dashboard/DisplayCount";
-import RecentActivities from "./dashboard/RecentActivities";
+import DashboardChart from "../components/dashboard/DashboardChart";
+import DisplayCount from "../components/dashboard/DisplayCount";
+import RecentActivities from "../components/dashboard/RecentActivities";
 
 function Dashboard() {
   return (
