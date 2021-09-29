@@ -6,11 +6,13 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  TableBody,
 } from "@mui/material";
 import React, { useState } from "react";
 import EnchancedToolbar from "../components/EnchancedToolbar";
 import ModalCreate from "../components/PLB/ModalCreate";
 import MainLayout from "../layout/MainLayout";
+import styles from "../styles/dashboard/index.module.scss";
 
 function PLB() {
   const [openModal, setOpenModal] = useState(false);
@@ -29,7 +31,7 @@ function PLB() {
         <Paper elevation={0} sx={{ width: "100%" }}>
           <EnchancedToolbar handleOpenModal={handleOpenModal} />
           <TableContainer>
-            <Table>
+            <Table className={styles.simple_table}>
               <TableHead>
                 <TableRow>
                   <TableCell>No</TableCell>
@@ -43,6 +45,19 @@ function PLB() {
                   <TableCell>Jalur</TableCell>
                 </TableRow>
               </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell>1</TableCell>
+                  <TableCell>PLB-BC 2.7</TableCell>
+                  <TableCell>10123123213123123452</TableCell>
+                  <TableCell>01 Jan 2021</TableCell>
+                  <TableCell>1009332434</TableCell>
+                  <TableCell>01 Jan 2021</TableCell>
+                  <TableCell>1000932332 Avengers</TableCell>
+                  <TableCell>Stark Industries</TableCell>
+                  <TableCell></TableCell>
+                </TableRow>
+              </TableBody>
             </Table>
           </TableContainer>
         </Paper>
