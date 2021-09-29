@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  experimentalStyled,
-  Avatar,
-  Stack,
-} from "@mui/material";
-import { styled } from "@mui/system";
+import { AppBar, Toolbar, experimentalStyled, Stack } from "@mui/material";
 import UserDropdown from "./Navbar/UserDropdown";
 import ListsMenu from "./Navbar/ListsMenu";
 import MenuSection from "./Navbar/MenuSection";
+import styles from "../styles/dashboard/index.module.scss";
 
 function Navbar() {
   return (
@@ -20,11 +13,12 @@ function Navbar() {
         alignItems="center"
         direction="row"
       >
-        <LogoCompany
+        <img
+          className={styles.header_logo_company}
           src={require("../assets/img/logo_kuadran.png").default}
           alt="logo_kuadran"
         />
-        <TitleApp>IT Inventory</TitleApp>
+        <div className={styles.header_title}>IT Inventory</div>
         <UserDropdown />
       </Header>
       <NavbarMenu position="sticky">
@@ -47,22 +41,11 @@ function Navbar() {
 
 const HEIGHT_APPBAR = 80;
 const HORIZONTAL_DISTANCE = 40;
-const VERTICAL_DISTANCE = 20;
 
 const Header = experimentalStyled(Stack)({
   background: "#fff",
   height: `${HEIGHT_APPBAR}px`,
   padding: `0 ${HORIZONTAL_DISTANCE}px`,
-});
-
-const LogoCompany = styled("img")(({ theme }) => ({
-  width: "120px",
-}));
-
-const TitleApp = experimentalStyled(Typography)({
-  fontWeight: "700",
-  fontSize: "2rem",
-  userSelect: "none",
 });
 
 const NavbarMenu = experimentalStyled(AppBar)({

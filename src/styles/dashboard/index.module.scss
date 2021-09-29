@@ -1,0 +1,137 @@
+@import "../../assets/fonts/Sf_Pro/";
+
+// Header
+.header {
+  &_logo_company {
+    width: 120px;
+  }
+  &_title {
+    font-weight: bold;
+    font-family: "SF Pro Display Medium" !important;
+    font-size: 2rem;
+    user-select: none;
+    color: #313751;
+  }
+}
+
+// Navbar
+.navbar {
+  &_menu {
+    &_wrapper {
+      width: 200px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-direction: row;
+      height: 64px;
+      position: relative;
+    }
+    &_active {
+      position: absolute;
+      bottom: 0;
+      background-color: #fff;
+      width: 100%;
+      height: 5px;
+    }
+    &_item {
+      color: #8d8ac7;
+      text-decoration: none;
+    }
+  }
+}
+
+// Box Count
+.box_count_wrapper {
+  display: flex;
+  padding: 20px 20px;
+  border-radius: 20px;
+  color: #fff;
+  align-items: center;
+  gap: 20px;
+}
+
+.box_count_icon {
+  padding: 1rem;
+  border-radius: 20%;
+}
+
+.box_count_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  gap: 20px;
+  &_name {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "SF Pro Display Medium" !important;
+  }
+  &_number {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "SF Pro Display Medium" !important;
+  }
+}
+// End Box Count
+
+// Table
+.simple_table tr th {
+  font-weight: 700;
+  color: #313751;
+  border-bottom: 1px solid #d8dcf2;
+  font-family: "SF Pro Display Medium" !important;
+}
+.simple_table tr td {
+  font-weight: normal;
+  color: #313751;
+  border-bottom: 1px solid #d8dcf2;
+  font-family: "SF Pro Display Medium" !important;
+}
+.simple_table tbody tr {
+  background-color: #f2f4fd;
+}
+// End Table
+
+// Linear Progress Bar
+.info_progress {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  &_badge_count {
+    padding: 4px 5px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &_badge_count_up {
+    background-color: rgba(0, 206, 159, 0.1);
+    color: #3cb774;
+  }
+  &_badge_count_down {
+    background-color: rgba(222, 61, 51, 0.1);
+    color: #de3d33;
+  }
+  &_label {
+    color: #8d8ac7;
+  }
+  &_bar_up {
+    height: 10px !important;
+    background-color: #f7f8fd !important;
+    span {
+      background-color: #3cb774 !important;
+    }
+  }
+  &_bar_down {
+    height: 10px !important;
+    background-color: #f7f8fd !important;
+    span {
+      background-color: #de3d33 !important;
+    }
+  }
+}
+// End Linear Progress Bar
