@@ -8,3 +8,7 @@ body {
   background-color: #f7f8fd;
   color: #312e68;
 }
+
+.filter-green {
+  filter: invert(90%) sepia(72%) saturate(2476%) brightness(100%) contrast(10%);
+}
