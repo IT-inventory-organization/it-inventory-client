@@ -1,11 +1,13 @@
 import { Container, Grid } from "@mui/material";
+import "../styles/dashboard/index.scss";
 import DashboardChart from "../components/dashboard/DashboardChart";
 import DisplayCount from "../components/dashboard/DisplayCount";
 import RecentActivities from "../components/dashboard/RecentActivities";
+import MainLayout from "../layout/MainLayout";
 
 function Dashboard() {
   return (
-    <Container>
+    <MainLayout>
       {/* Display Count */}
       <Grid container justifyContent="space-between" spacing={2} mt={3}>
         <Grid item xs={12} sm={6} md={3}>
@@ -55,7 +57,7 @@ function Dashboard() {
       <Grid container my={4}>
         <DashboardChart />
       </Grid>
-    </Container>
+    </MainLayout>
   );
 }
 
