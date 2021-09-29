@@ -1,23 +1,27 @@
+import { ReactComponent as IcDashboard } from "../../assets/icons/ic_dashboard.svg";
+import { ReactComponent as IcInventory } from "../../assets/icons/ic_inventory.svg";
+import { ReactComponent as IcSetup } from "../../assets/icons/ic_setup.svg";
+
 const ListsMenu = [
   {
     name: "Dahsboard",
     path: "/",
-    icon: "",
+    icon: <IcDashboard />,
   },
   {
     name: "PLB",
     path: "/plb",
-    icon: "",
+    icon: <IcInventory />,
   },
   {
     name: "PPFTZ",
     path: "/ppftz",
-    icon: "",
+    icon: <IcInventory />,
   },
   {
     name: "Setup",
     path: "/setup",
-    icon: "",
+    icon: <IcSetup />,
   },
 ];
 
