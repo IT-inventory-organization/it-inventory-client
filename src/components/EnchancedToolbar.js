@@ -10,10 +10,10 @@ function EnchancedToolbar(props) {
   const { handleOpenModal } = props;
   return (
     <Grid container sx={{ padding: "5px 20px" }}>
-      <Grid lg={6} md={12} xs={12}>
+      <Grid item lg={6} md={12} xs={12}>
         Left Content
       </Grid>
-      <Grid lg={6} md={12} xs={12}>
+      <Grid item lg={6} md={12} xs={12}>
         <Stack spacing={1} justifyContent="flex-end" direction="row">
           <ButtonEnhanced sx={{ color: "#5682FF" }}>View</ButtonEnhanced>
           <ButtonEnhanced sx={{ color: "#F9B800" }}>Edit</ButtonEnhanced>
