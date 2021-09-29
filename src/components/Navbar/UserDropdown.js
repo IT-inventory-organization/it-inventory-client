@@ -33,7 +33,7 @@ function UserDropdown() {
         direction="row"
       >
         <Avatar alt="User" src="" />
-        <Typography style={{ fontWeight: "700" }}>Administrator</Typography>
+        <Typography style={{ fontWeight: "700", color: "#313751" }}>Administrator</Typography>
         <img
           style={{ stroke: "red" }}
           src={require("../../assets/icons/ic_chevron.svg").default}
