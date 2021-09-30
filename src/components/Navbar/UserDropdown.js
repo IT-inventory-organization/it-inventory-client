@@ -1,18 +1,13 @@
 import {
   Avatar,
-  ClickAwayListener,
   Divider,
   experimentalStyled,
-  Grow,
   Menu,
   MenuItem,
-  MenuList,
-  Paper,
-  Popper,
   Stack,
   Typography,
 } from "@mui/material";
-import React, { useState, useRef } from "react";
+import React from "react";
 
 function UserDropdown() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -33,7 +28,9 @@ function UserDropdown() {
         direction="row"
       >
         <Avatar alt="User" src="" />
-        <Typography style={{ fontWeight: "700", color: "#313751" }}>Administrator</Typography>
+        <Typography style={{ fontWeight: "700", color: "#313751" }}>
+          Administrator
+        </Typography>
         <img
           style={{ stroke: "red" }}
           src={require("../../assets/icons/ic_chevron.svg").default}
