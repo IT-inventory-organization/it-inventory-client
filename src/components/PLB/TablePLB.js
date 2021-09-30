@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import EnchancedToolbar from "../EnchancedToolbar";
 import useTable from "../useTable";
-import { TableBody, TableRow, TableCell } from "@mui/material";
+import {
+  TableBody,
+  TableRow,
+  TableCell,
+  Button,
+  MenuItem,
+} from "@mui/material";
 import PBLDummy from "../../dummy/plbDummy.json";
 import LineApproval from "./LineApproval";
+import MenuActions from "../MenuActions";
+import { ReactComponent as IcView } from "../../assets/icons/ic_view.svg";
+import { ReactComponent as IcDelete } from "../../assets/icons/ic_delete.svg";
+import { ReactComponent as IcEdit } from "../../assets/icons/ic_edit.svg";
+import { ReactComponent as IcPrint } from "../../assets/icons/ic_print.svg";
 
 const headCells = [
-  { id: "no", label: "No" },
-  { id: "jenisInventory", label: "Jenis Inventory" },
+  { id: "id", label: "No" },
+  { id: "jenisInvetory", label: "Jenis Inventory" },
   { id: "nomorAjuan", label: "Nomor Ajuan" },
   { id: "tanggalAjuan", label: "Tanggal Ajuan" },
   { id: "noDaftar", label: "No.Daftar" },
@@ -15,24 +26,51 @@ const headCells = [
   { id: "pengirim", label: "Pengirim" },
   { id: "penerima", label: "Penerima" },
   { id: "jalur", label: "Jalur", disableSorting: true },
-  // { id: "action", label: "", disableSorting: true },
+  { id: "action", label: "", disableSorting: true },
 ];
 
 function TablePLB({ handleOpenModal }) {
-  const { TblContainer, TblHead, TblPagination } = useTable(
-    PBLDummy,
-    headCells
-  );
+  const [filterFn, setFilterFn] = useState({
+    fn: (items) => {
+      return items;
+    },
+  });
+  const {
+    TblContainer,
+    TblHead,
+    TblPagination,
+    recordsAfterPagingAndSorting,
+    page,
+    rowsPerPage,
+  } = useTable(PBLDummy, headCells, filterFn);
+
+  const handleSearch = useCallback((e) => {
+    let target = e.target;
+    setFilterFn({
+      fn: (items) => {
+        if (target.value == "") return items;
+        else
+          return items.filter((x) =>
+            x.jenisInvetory.toLowerCase().includes(target.value)
+          );
+      },
+    });
+  }, []);
+
   return (
     <>
-      <EnchancedToolbar handleOpenModal={handleOpenModal} />
-      <TblContainer>
+      <EnchancedToolbar
+        handleOpenModal={handleOpenModal}
+        handleChangeSearch={handleSearch}
+      />
+      <TblContainer size="small">
         <TblHead />
         <TableBody>
-          {PBLDummy.map((val, index) => {
+          {recordsAfterPagingAndSorting().map((val, index) => {
             return (
               <TableRow key={index.toString()}>
-                <TableCell>{index + 1}</TableCell>
+                {/* <TableCell>{page * rowsPerPage + (index + 1)}</TableCell> */}
+                <TableCell>{val.id}</TableCell>
                 <TableCell>{val.jenisInvetory}</TableCell>
                 <TableCell>{val.nomorAjuan}</TableCell>
                 <TableCell>{val.tanggalAjuan}</TableCell>
@@ -43,7 +81,26 @@ function TablePLB({ handleOpenModal }) {
                 <TableCell>
                   <LineApproval approval={val.jenisInvetory} />
                 </TableCell>
-                {/* <TableCell>action</TableCell> */}
+                <TableCell>
+                  <MenuActions placeholder={"Actions"}>
+                    <MenuItem>
+                      <IcView />
+                      View
+                    </MenuItem>
+                    <MenuItem>
+                      <IcEdit />
+                      Edit
+                    </MenuItem>
+                    <MenuItem>
+                      <IcDelete />
+                      Delete
+                    </MenuItem>
+                    <MenuItem>
+                      <IcPrint />
+                      Print
+                    </MenuItem>
+                  </MenuActions>
+                </TableCell>
               </TableRow>
             );
           })}
