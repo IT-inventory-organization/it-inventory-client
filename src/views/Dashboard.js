@@ -1,12 +1,12 @@
-import { Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import DashboardChart from "../components/dashboard/DashboardChart";
 import DisplayCount from "../components/dashboard/DisplayCount";
 import RecentActivities from "../components/dashboard/RecentActivities";
 import MainLayout from "../layout/MainLayout";
-import {ReactComponent as IcProductIn} from '../assets/icons/ic_productin.svg'
-import {ReactComponent as IcProductOut} from '../assets/icons/ic_productout.svg'
-import {ReactComponent as IcStockOpName} from '../assets/icons/ic_stock_opname.svg'
-import {ReactComponent as IcDataAdjutment} from '../assets/icons/ic_data_adjutment.svg'
+import { ReactComponent as IcProductIn } from "../assets/icons/ic_productin.svg";
+import { ReactComponent as IcProductOut } from "../assets/icons/ic_productout.svg";
+import { ReactComponent as IcStockOpName } from "../assets/icons/ic_stock_opname.svg";
+import { ReactComponent as IcDataAdjutment } from "../assets/icons/ic_data_adjutment.svg";
 
 function Dashboard() {
   return (
@@ -19,7 +19,7 @@ function Dashboard() {
             count={1300}
             ContainerColor="#3CB774"
             BoxIconColor="#5ECE91"
-            icon={<IcProductIn/>}
+            icon={<IcProductIn />}
           />
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
