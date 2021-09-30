@@ -1,19 +1,8 @@
-import {
-  Grid,
-  Paper,
-  Table,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  TableBody,
-} from "@mui/material";
+import { Grid, Paper } from "@mui/material";
 import React, { useState } from "react";
-import EnchancedToolbar from "../components/EnchancedToolbar";
 import ModalCreate from "../components/PLB/ModalCreate";
 import TablePLB from "../components/PLB/TablePLB.js";
 import MainLayout from "../layout/MainLayout";
-import styles from "../styles/dashboard/index.module.scss";
 
 function PLB() {
   const [openModal, setOpenModal] = useState(false);
@@ -28,7 +17,7 @@ function PLB() {
 
   return (
     <MainLayout>
-      <Grid container mt={3}>
+      <Grid container my={3}>
         <Paper elevation={0} sx={{ width: "100%" }}>
           <TablePLB handleOpenModal={handleOpenModal} />
         </Paper>
