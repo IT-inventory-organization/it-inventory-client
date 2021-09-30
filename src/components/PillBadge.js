@@ -11,10 +11,10 @@ const Pill = styled("div")(({ theme }) => ({
 }));
 
 function PillBadge(props) {
-  let { text, color } = props;
+  let { text, color, ...other } = props;
 
   return (
-    <Pill style={{ border: `1px solid ${color}` }} {...props}>
+    <Pill style={{ border: `1px solid ${color}` }} {...other}>
       <Typography style={{ color: color }} variant="body2">
         {text}
       </Typography>
