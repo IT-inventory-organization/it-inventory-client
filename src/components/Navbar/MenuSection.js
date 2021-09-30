@@ -20,4 +20,4 @@ function MenuSection(props) {
   );
 }
 
-export default MenuSection;
+export default React.memo(MenuSection);
