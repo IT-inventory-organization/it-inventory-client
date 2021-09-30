@@ -7,44 +7,41 @@ import {
   TableRow,
 } from "@mui/material";
 import React from "react";
-import PillBadge from "../PillBadge";
 import WrapSection from "../WrapSection";
+import styles from "../../styles/dashboard/index.module.scss";
+import LineApproval from "../PLB/LineApproval";
 
 function RecentActivities() {
   return (
     <WrapSection title="Recent Activities">
       <TableContainer style={{ marginTop: "1rem" }}>
-        <Table>
+        <Table className={styles.simple_table}>
           <TableHead>
             <TableRow>
-              <TableCell>Nama Perusahaan</TableCell>
-              <TableCell>Jenis Kegiatan</TableCell>
-              <TableCell>Kategori Barang</TableCell>
-              <TableCell>Uraian</TableCell>
-              <TableCell>Quantity</TableCell>
-              <TableCell>Date</TableCell>
+              <TableCell>No</TableCell>
+              <TableCell>Jenis Inventory</TableCell>
+              <TableCell>Nomor Ajuan</TableCell>
+              <TableCell>Tanggal Ajuan</TableCell>
+              <TableCell>No.Daftar</TableCell>
+              <TableCell>Tanggal Daftar</TableCell>
+              <TableCell>Pengirim</TableCell>
+              <TableCell>Penerima</TableCell>
+              <TableCell>Jalur</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             <TableRow>
-              <TableCell>Kuadran</TableCell>
-              <TableCell>Import</TableCell>
+              <TableCell>1</TableCell>
+              <TableCell>PLB-BC 2.7</TableCell>
+              <TableCell>10123123213123123452</TableCell>
+              <TableCell>01 Jan 2021</TableCell>
+              <TableCell>1009332434</TableCell>
+              <TableCell>01 Jan 2021</TableCell>
+              <TableCell>1000932332 Avengers</TableCell>
+              <TableCell>Stark Industries</TableCell>
               <TableCell>
-                <PillBadge text="Mesin & Peralatan" />
+                <LineApproval />
               </TableCell>
-              <TableCell>Lensa Kamera</TableCell>
-              <TableCell>100</TableCell>
-              <TableCell>04 Jan 2021</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Kuadran</TableCell>
-              <TableCell>Import</TableCell>
-              <TableCell>
-                <PillBadge text="Mesin & Peralatan" />
-              </TableCell>
-              <TableCell>Lensa Kamera</TableCell>
-              <TableCell>100</TableCell>
-              <TableCell>04 Jan 2021</TableCell>
             </TableRow>
           </TableBody>
         </Table>

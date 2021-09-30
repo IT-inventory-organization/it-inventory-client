@@ -1,0 +1,225 @@
+// Header
+.header {
+  &_logo_company {
+    width: 120px;
+  }
+  &_title {
+    font-weight: bold;
+    font-size: 2rem;
+    user-select: none;
+    color: #313751;
+  }
+}
+
+// Navbar
+.navbar {
+  &_menu {
+    &_wrapper {
+      width: 200px;
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-direction: row;
+      height: 64px;
+      position: relative;
+    }
+    &_active {
+      position: absolute;
+      bottom: 0;
+      background-color: #fff;
+      width: 100%;
+      height: 5px;
+    }
+    &_item {
+      color: #8d8ac7;
+      text-decoration: none;
+    }
+  }
+}
+
+// Box Count
+.box_count_wrapper {
+  display: flex;
+  padding: 20px 20px;
+  border-radius: 20px;
+  color: #fff;
+  align-items: center;
+  gap: 20px;
+}
+
+.box_count_icon {
+  padding: 1rem;
+  border-radius: 20%;
+}
+
+.box_count_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  gap: 20px;
+  &_name {
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  &_number {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+// End Box Count
+
+// Table
+.simple_table tr th {
+  font-weight: 700;
+  color: #312e68;
+  border-bottom: 1px solid #d8dcf2;
+  font-weight: 600;
+}
+.simple_table tr td {
+  font-weight: normal;
+  color: #312e68;
+  border-bottom: 1px solid #d8dcf2;
+}
+.simple_table tbody tr {
+  // background-color: #f2f4fd;
+}
+// End Table
+
+// Linear Progress Bar
+.info_progress {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  &_badge_count {
+    padding: 4px 5px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+  &_badge_count_up {
+    background-color: rgba(0, 206, 159, 0.1);
+    color: #3cb774;
+  }
+  &_badge_count_down {
+    background-color: rgba(222, 61, 51, 0.1);
+    color: #de3d33;
+  }
+  &_label {
+    color: #8d8ac7;
+  }
+  &_bar_up {
+    height: 10px !important;
+    background-color: #f7f8fd !important;
+    span {
+      background-color: #3cb774 !important;
+    }
+  }
+  &_bar_down {
+    height: 10px !important;
+    background-color: #f7f8fd !important;
+    span {
+      background-color: #de3d33 !important;
+    }
+  }
+}
+// End Linear Progress Bar
+
+// Badge
+.line_badge {
+  background-color: #d8dcf2;
+  width: 45px;
+  height: 7px;
+  border-radius: 10px;
+}
+// end badge
+
+// Enchanced Toolbar
+.enchanced_toolbar {
+  align-items: center;
+  padding: 20px;
+  &_btn {
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
+  &_btn.btn_create {
+    background-color: #312e68;
+    text-transform: capitalize;
+    border-radius: 10px;
+    width: 25%;
+    &:hover {
+      background-color: #312e68;
+    }
+  }
+  &_search {
+    width: 60%;
+    max-height: 50px;
+    & input::placeholder {
+      color: #8d8ac7;
+      opacity: 1;
+    }
+    & fieldset {
+      border-radius: 10px;
+      border-color: #d8dcf2;
+    }
+    svg {
+      margin-right: 20px;
+      circle {
+        stroke: #8d8ac7;
+      }
+      path {
+        stroke: #8d8ac7;
+      }
+    }
+  }
+}
+
+// Modal
+.modal_create {
+  &_btn_close {
+    cursor: pointer;
+  }
+}
+
+// Select
+.bootstrap_wrapper_select {
+  box-sizing: border-box;
+  border: 1px solid #d8dcf2;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  select {
+    outline: none;
+    padding: 10px 12px;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    border: none;
+    font-size: 16px;
+  }
+  &_icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.bootstrap_btn_save {
+  background-color: transparent;
+  width: max-content;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  span {
+    font-size: 1rem;
+    color: #9ba1bc;
+  }
+}

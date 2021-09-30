@@ -1,57 +1,35 @@
 import React from "react";
 import { LinearProgress } from "@mui/material";
-import { styled, alpha } from "@mui/system";
-
-const BoxProgress = styled("div")(({ theme }) => ({}));
-
-const InfoProgress = styled("div")(({ theme }) => ({
-  display: "flex",
-  justifyContent: "space-between",
-  padding: "10px 0",
-}));
-
-const Label = styled("div")(({ theme }) => ({
-  color: "#8D8AC7",
-}));
-
-const BadgeCount = styled("div")(({ theme }) => ({
-  backgroundColor: alpha("#00CE9F", 0.1),
-  padding: "4px 5px",
-  borderRadius: "50px",
-  color: "#3CB774",
-  fontSize: "0.8rem",
-  display: "inline-flex",
-  alignItems: "center",
-  gap: 5,
-}));
-
-const LinearProgessStyle = {
-  height: "10px",
-};
+import styles from "../../styles/dashboard/index.module.scss";
+import classnames from "classnames";
 
 function LinearProgressWithLable(props) {
-  const { year, percent, style } = props;
+  const { year, percent, ...other } = props;
 
   function handleIcon() {
     return require("../../assets/icons/ic_arrow_data_up.svg").default;
   }
 
   return (
-    <BoxProgress>
-      <InfoProgress>
-        <Label>{year}</Label>
-        <BadgeCount>
+    <div>
+      <div className={styles.info_progress}>
+        <div className={styles.info_progress_label}>{year}</div>
+        <div
+          className={classnames(
+            styles.info_progress_badge_count,
+            styles.info_progress_badge_count_up
+          )}
+        >
           <img src={handleIcon()} alt="" />
           {"  "}+{percent}%
-        </BadgeCount>
-      </InfoProgress>
+        </div>
+      </div>
       <LinearProgress
-        style={LinearProgessStyle}
-        color="success"
+        className={styles.info_progress_bar_up}
         variant="determinate"
-        {...props}
+        {...other}
       />
-    </BoxProgress>
+    </div>
   );
 }
 
