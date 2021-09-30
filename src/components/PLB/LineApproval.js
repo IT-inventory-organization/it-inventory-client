@@ -6,7 +6,7 @@ function LineApproval(props) {
   return (
     <div
       className={styles.line_badge}
-      style={{ backgroundColor: approval ? "#3cb774" : "#DE3D33" }}
+      style={{ backgroundColor: approval ? "#3cb774" : "#F27B61" }}
     ></div>
   );
 }

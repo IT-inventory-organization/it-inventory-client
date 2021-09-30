@@ -1,0 +1,112 @@
+[
+	{
+		"id": 1,
+		"jenisInvetory": "PLB - BC 2.7",
+		"nomorAjuan": 126594547904445,
+		"tanggalAjuan": "02-09-2019",
+		"noDaftar": 143558578092638,
+		"tanggalDaftar": "06-06-2018",
+		"pengirim": "Roz",
+		"penerima": "Santoro",
+		"jalur": false
+	},
+	{
+		"id": 2,
+		"jenisInvetory": "PLB - BC 2.6",
+		"nomorAjuan": 196960023298269,
+		"tanggalAjuan": "05-06-2019",
+		"noDaftar": 100520012937667,
+		"tanggalDaftar": "06-02-2018",
+		"pengirim": "Gerrie",
+		"penerima": "Lanita",
+		"jalur": true
+	},
+	{
+		"id": 3,
+		"jenisInvetory": "PLB - BC 4.0",
+		"nomorAjuan": 174292494006002,
+		"tanggalAjuan": "01-07-2018",
+		"noDaftar": 189438856881825,
+		"tanggalDaftar": "16-10-2019",
+		"pengirim": "Camile",
+		"penerima": "Revkah",
+		"jalur": true
+	},
+	{
+		"id": 4,
+		"jenisInvetory": "PLB - BC 2.6",
+		"nomorAjuan": 106276954983504,
+		"tanggalAjuan": "17-11-2018",
+		"noDaftar": 123952171190931,
+		"tanggalDaftar": "22-09-2018",
+		"pengirim": "Selia",
+		"penerima": "Burkle",
+		"jalur": true
+	},
+	{
+		"id": 5,
+		"jenisInvetory": "PLB - BC 2.7",
+		"nomorAjuan": 193637874947440,
+		"tanggalAjuan": "24-04-2019",
+		"noDaftar": 195204342706916,
+		"tanggalDaftar": "31-08-2018",
+		"pengirim": "Jinny",
+		"penerima": "Si",
+		"jalur": true
+	},
+	{
+		"id": 6,
+		"jenisInvetory": "PLB - BC 2.6",
+		"nomorAjuan": 122760961572881,
+		"tanggalAjuan": "18-03-2018",
+		"noDaftar": 172194336272757,
+		"tanggalDaftar": "23-01-2019",
+		"pengirim": "Madalyn",
+		"penerima": "Thunell",
+		"jalur": false
+	},
+	{
+		"id": 7,
+		"jenisInvetory": "PLB - BC 2.7",
+		"nomorAjuan": 115203517694836,
+		"tanggalAjuan": "20-03-2019",
+		"noDaftar": 195094739277353,
+		"tanggalDaftar": "21-01-2018",
+		"pengirim": "Basia",
+		"penerima": "Wittie",
+		"jalur": true
+	},
+	{
+		"id": 8,
+		"jenisInvetory": "PLB - BC 2.6",
+		"nomorAjuan": 151916225353375,
+		"tanggalAjuan": "24-07-2019",
+		"noDaftar": 163397090885008,
+		"tanggalDaftar": "09-09-2019",
+		"pengirim": "Mamie",
+		"penerima": "Fredi",
+		"jalur": false
+	},
+	{
+		"id": 9,
+		"jenisInvetory": "PLB - BC 4.0",
+		"nomorAjuan": 182614407783668,
+		"tanggalAjuan": "22-05-2018",
+		"noDaftar": 194624196885883,
+		"tanggalDaftar": "03-07-2019",
+		"pengirim": "Rosene",
+		"penerima": "Hewitt",
+		"jalur": true
+	},
+	{
+		"id": 10,
+		"jenisInvetory": "PLB - BC 2.6",
+		"nomorAjuan": 165144170318033,
+		"tanggalAjuan": "20-06-2018",
+		"noDaftar": 152890112246234,
+		"tanggalDaftar": "17-07-2019",
+		"pengirim": "Kenna",
+		"penerima": "Holbrook",
+		"jalur": false
+	}
+]

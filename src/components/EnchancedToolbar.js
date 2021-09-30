@@ -1,36 +1,43 @@
-import { Button, Grid, Stack, TextField } from "@mui/material";
-import { styled } from "@mui/system";
 import React from "react";
-
-const ButtonEnhanced = styled(Button)(({ theme }) => ({
-  textTransform: "capitalize",
-}));
+import {
+  Button,
+  Grid,
+  Stack,
+  OutlinedInput,
+  InputAdornment,
+} from "@mui/material";
+import styles from "../styles/dashboard/index.module.scss";
+import classnames from "classnames";
+// import { ReactComponent as IcView } from "../assets/icons/ic_view.svg";
+// import { ReactComponent as IcView } from "../assets/icons/ic_view.svg";
+// import { ReactComponent as IcView } from "../assets/icons/ic_view.svg";
+// import { ReactComponent as IcView } from "../assets/icons/ic_view.svg";
+import { ReactComponent as IcSearch } from "../assets/icons/ic_search.svg";
+import StyledTextField from "./StyledTextField";
 
 function EnchancedToolbar(props) {
   const { handleOpenModal } = props;
   return (
-    <Grid container sx={{ padding: "5px 20px" }}>
-      <Grid item lg={6} md={12} xs={12}>
-        Left Content
+    <Grid className={styles.enchanced_toolbar} container>
+      <Grid item lg={6} md={6} sm={6} xs={12}>
+        <OutlinedInput
+          className={styles.enchanced_toolbar_search}
+          startAdornment={<IcSearch />}
+          placeholder="Cari"
+        />
       </Grid>
-      <Grid item lg={6} md={12} xs={12}>
+      <Grid item lg={6} md={6} sm={6} xs={12}>
         <Stack spacing={1} justifyContent="flex-end" direction="row">
-          <ButtonEnhanced sx={{ color: "#5682FF" }}>View</ButtonEnhanced>
-          <ButtonEnhanced sx={{ color: "#F9B800" }}>Edit</ButtonEnhanced>
-          <ButtonEnhanced sx={{ color: "#F9B800" }}>Remove</ButtonEnhanced>
-          <ButtonEnhanced sx={{ color: "#DE3D33" }}>Print</ButtonEnhanced>
-          <ButtonEnhanced
+          <Button
+            className={classnames(
+              styles.enchanced_toolbar_btn,
+              styles.btn_create
+            )}
             onClick={() => handleOpenModal()}
-            sx={{
-              backgroundColor: "#312E68",
-              borderRadius: "10px",
-              fontSize: ".8rem",
-              textTransform: "capital",
-            }}
             variant="contained"
           >
             Create New
-          </ButtonEnhanced>
+          </Button>
         </Stack>
       </Grid>
     </Grid>

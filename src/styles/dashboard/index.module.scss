@@ -75,17 +75,17 @@
 // Table
 .simple_table tr th {
   font-weight: 700;
-  color: #313751;
+  color: #312e68;
   border-bottom: 1px solid #d8dcf2;
   font-weight: 600;
 }
 .simple_table tr td {
   font-weight: normal;
-  color: #313751;
+  color: #312e68;
   border-bottom: 1px solid #d8dcf2;
 }
 .simple_table tbody tr {
-  background-color: #f2f4fd;
+  // background-color: #f2f4fd;
 }
 // End Table
 
@@ -136,4 +136,90 @@
   width: 45px;
   height: 7px;
   border-radius: 10px;
+}
+// end badge
+
+// Enchanced Toolbar
+.enchanced_toolbar {
+  align-items: center;
+  padding: 20px;
+  &_btn {
+    font-size: 0.8rem;
+    text-transform: capitalize;
+  }
+  &_btn.btn_create {
+    background-color: #312e68;
+    text-transform: capitalize;
+    border-radius: 10px;
+    width: 25%;
+    &:hover {
+      background-color: #312e68;
+    }
+  }
+  &_search {
+    width: 60%;
+    max-height: 50px;
+    & input::placeholder {
+      color: #8d8ac7;
+      opacity: 1;
+    }
+    & fieldset {
+      border-radius: 10px;
+      border-color: #d8dcf2;
+    }
+    svg {
+      margin-right: 20px;
+      circle {
+        stroke: #8d8ac7;
+      }
+      path {
+        stroke: #8d8ac7;
+      }
+    }
+  }
+}
+
+// Modal
+.modal_create {
+  &_btn_close {
+    cursor: pointer;
+  }
+}
+
+// Select
+.bootstrap_wrapper_select {
+  box-sizing: border-box;
+  border: 1px solid #d8dcf2;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  select {
+    outline: none;
+    padding: 10px 12px;
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    border: none;
+    font-size: 16px;
+  }
+  &_icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.bootstrap_btn_save {
+  background-color: transparent;
+  width: max-content;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  span {
+    font-size: 1rem;
+    color: #9ba1bc;
+  }
 }
