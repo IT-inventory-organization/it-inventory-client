@@ -6,18 +6,23 @@ import {
   TablePagination,
   TableRow,
   TableSortLabel,
+  TableContainer,
 } from "@mui/material";
 import styles from "../styles/dashboard/index.module.scss";
 
 function useTable(records, headCells, filterFn) {
-  const pages = [5, 10, 25];
+  const pages = [10, 20, 30];
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(pages[page]);
-  const [order, setOrder] = useState("");
-  const [orderBy, setOrderBy] = useState("");
+  const [order, setOrder] = useState();
+  const [orderBy, setOrderBy] = useState();
 
   const TblContainer = (props) => {
-    return <Table className={styles.simple_table}>{props.children}</Table>;
+    return (
+      <TableContainer>
+        <Table className={styles.simple_table}>{props.children}</Table>
+      </TableContainer>
+    );
   };
 
   const TblHead = (props) => {
@@ -71,8 +76,8 @@ function useTable(records, headCells, filterFn) {
       rowsPerPageOptions={pages}
       rowsPerPage={rowsPerPage}
       count={records.length}
-      onChangePage={handleChangePage}
-      onChangeRowsPerPage={handleChangeRowsPerPage}
+      onPageChange={handleChangePage}
+      onRowsPerPageChange={handleChangeRowsPerPage}
     />
   );
 
@@ -114,6 +119,8 @@ function useTable(records, headCells, filterFn) {
     TblHead,
     TblPagination,
     recordsAfterPagingAndSorting,
+    page,
+    rowsPerPage,
   };
 }
 
