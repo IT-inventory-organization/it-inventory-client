@@ -9,7 +9,7 @@ import classnames from "classnames";
 import { ReactComponent as IcSearch } from "../assets/icons/ic_search.svg";
 
 function EnchancedToolbar(props) {
-  const { handleOpenModal, handleChangeSearch, ...other } = props;
+  const { handleOpenModal, handleChangeSearch } = props;
   return (
     <Grid className={styles.enchanced_toolbar} container>
       <Grid item lg={6} md={6} sm={6} xs={12}>
