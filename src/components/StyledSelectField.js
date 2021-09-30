@@ -1,6 +1,6 @@
 import React from "react";
 import { ReactComponent as IconChevron } from "../assets/icons/ic_chevron.svg";
-import { alpha, styled } from "@mui/system";
+import { styled } from "@mui/system";
 import styles from "../styles/dashboard/index.module.scss";
 
 function StyledSelectField({ label, fullWidth, ...other }) {
