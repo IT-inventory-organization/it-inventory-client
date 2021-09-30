@@ -9,6 +9,7 @@ import {
 import React from "react";
 import WrapSection from "../WrapSection";
 import styles from "../../styles/dashboard/index.module.scss";
+import LineApproval from "../PLB/LineApproval";
 
 function RecentActivities() {
   return (
@@ -38,7 +39,9 @@ function RecentActivities() {
               <TableCell>01 Jan 2021</TableCell>
               <TableCell>1000932332 Avengers</TableCell>
               <TableCell>Stark Industries</TableCell>
-              <TableCell></TableCell>
+              <TableCell>
+                <LineApproval />
+              </TableCell>
             </TableRow>
           </TableBody>
         </Table>
