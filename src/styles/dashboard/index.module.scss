@@ -223,3 +223,29 @@
     color: #9ba1bc;
   }
 }
+
+// Accordion
+.Accordion_Container {
+  margin-bottom: 10px;
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
+  &:before {
+    display: none;
+  }
+}
+
+.Accordion_Summary_Success {
+  background-color: rgba(17, 76, 143, 0.2) !important;
+  border: 1px solid #0c66cf !important;
+}
+
+.Accordion_Summary_Error {
+  background-color: rgba(242, 124, 97, 0.2) !important;
+  border: 1px solid #f27b61 !important;
+}
+
+.Accordion_Details {
+  padding: 16px;
+}
+// End Accordion
