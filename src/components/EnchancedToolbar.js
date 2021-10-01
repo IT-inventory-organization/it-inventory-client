@@ -2,10 +2,6 @@ import React from "react";
 import { Button, Grid, Stack, OutlinedInput } from "@mui/material";
 import styles from "../styles/dashboard/index.module.scss";
 import classnames from "classnames";
-// import { ReactComponent as IcView } from "../assets/icons/ic_view.svg";
-// import { ReactComponent as IcView } from "../assets/icons/ic_view.svg";
-// import { ReactComponent as IcView } from "../assets/icons/ic_view.svg";
-// import { ReactComponent as IcView } from "../assets/icons/ic_view.svg";
 import { ReactComponent as IcSearch } from "../assets/icons/ic_search.svg";
 
 function EnchancedToolbar(props) {
