@@ -13,7 +13,7 @@ function WrapSection(props) {
   const { children, title } = props;
   return (
     <Box>
-      <Typography style={{ fontWeight: 600, color: "#313751" }}>
+      <Typography style={{ fontWeight: 600, color: "#313751" }} variant="h6">
         {title}
       </Typography>
       {children}
