@@ -24,7 +24,15 @@ export function NavbarComponent() {
       <NavbarMenu position="sticky">
         <Toolbar>
           {ListsMenu.map((item, index) => {
-            return (
+            return item.path === "/" ? (
+              <MenuSection
+                exact
+                key={index.toString()}
+                name={item.name}
+                path={item.path}
+                icon={item.icon}
+              />
+            ) : (
               <MenuSection
                 key={index.toString()}
                 name={item.name}

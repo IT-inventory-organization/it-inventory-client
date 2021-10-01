@@ -16,25 +16,48 @@
   &_menu {
     &_wrapper {
       width: 200px;
-      justify-content: center;
       display: flex;
-      align-items: center;
-      gap: 15px;
-      flex-direction: row;
+      justify-content: center;
       height: 64px;
       position: relative;
     }
-    &_active {
-      position: absolute;
-      bottom: 0;
-      background-color: #fff;
-      width: 100%;
-      height: 5px;
-    }
     &_item {
-      color: #8d8ac7;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      width: max-content;
       text-decoration: none;
+      color: #8d8ac7;
+      &_active {
+        color: white;
+        svg {
+          path,
+          circle,
+          rect {
+            stroke: white;
+          }
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background-color: white;
+          animation: menu_active 0.5s ease;
+        }
+      }
     }
+  }
+}
+
+@keyframes menu_active {
+  from {
+    height: 0;
+  }
+  to {
+    height: 5px;
   }
 }
 
