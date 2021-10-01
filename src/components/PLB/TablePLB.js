@@ -1,13 +1,8 @@
+/* eslint-disable eqeqeq */
 import React, { useCallback, useState } from "react";
 import EnchancedToolbar from "../EnchancedToolbar";
 import useTable from "../useTable";
-import {
-  TableBody,
-  TableRow,
-  TableCell,
-  Button,
-  MenuItem,
-} from "@mui/material";
+import { TableBody, TableRow, TableCell, MenuItem } from "@mui/material";
 import PBLDummy from "../../dummy/plbDummy.json";
 import LineApproval from "./LineApproval";
 import MenuActions from "../MenuActions";
@@ -35,6 +30,7 @@ function TablePLB({ handleOpenModal }) {
       return items;
     },
   });
+
   const {
     TblContainer,
     TblHead,
@@ -45,14 +41,17 @@ function TablePLB({ handleOpenModal }) {
   } = useTable(PBLDummy, headCells, filterFn);
 
   const handleSearch = useCallback((e) => {
-    let target = e.target;
+    let target = e.target.value;
     setFilterFn({
       fn: (items) => {
-        if (target.value == "") return items;
+        if (target.toLowerCase() == "") return items;
         else
-          return items.filter((x) =>
-            x.jenisInvetory.toLowerCase().includes(target.value)
-          );
+          return items.filter((x) => {
+            return x.jenisInvetory
+              .toLowerCase()
+              .replace(/ /g, "")
+              .includes(target.toLowerCase().replace(/ /g, ""));
+          });
       },
     });
   }, []);
