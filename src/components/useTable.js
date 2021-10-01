@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useRef, useState } from "react";
 import {
   Table,
   TableCell,
@@ -10,7 +10,8 @@ import {
 } from "@mui/material";
 import styles from "../styles/dashboard/index.module.scss";
 
-function useTable(records, headCells, filterFn) {
+function useTable(data, headCells, filterFn) {
+  const { current: records } = useRef(data);
   const pages = [10, 20, 30];
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(pages[page]);
@@ -118,9 +119,9 @@ function useTable(records, headCells, filterFn) {
   };
 
   return {
-    TblContainer,
-    TblHead,
-    TblPagination,
+    TblContainer: memo(TblContainer),
+    TblHead: memo(TblHead),
+    TblPagination: memo(TblPagination),
     recordsAfterPagingAndSorting,
     page,
     rowsPerPage,
