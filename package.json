@@ -13,6 +13,7 @@
     "chart.js": "^3.5.1",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
+    "lodash": "^4.17.21",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-chartjs-2": "^3.0.5",
@@ -22,8 +23,6 @@
     "react-scripts": "4.0.3",
     "redux": "^4.1.1",
     "redux-thunk": "^2.3.0",
-    "simplebar": "^5.3.6",
-    "simplebar-react": "^2.3.6",
     "web-vitals": "^1.1.2",
     "yup": "^0.32.9"
   },
