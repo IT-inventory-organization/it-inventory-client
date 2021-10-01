@@ -5,7 +5,7 @@ import ListsMenu from "./Navbar/ListsMenu";
 import MenuSection from "./Navbar/MenuSection";
 import styles from "../styles/dashboard/index.module.scss";
 
-function Navbar() {
+export function NavbarComponent() {
   return (
     <>
       <Header
@@ -52,4 +52,4 @@ const NavbarMenu = experimentalStyled(AppBar)({
   backgroundColor: "#312E68",
 });
 
-export default Navbar;
+export const Navbar = React.memo(NavbarComponent);
