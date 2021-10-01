@@ -5,11 +5,14 @@ import { Stack } from "@mui/material";
 import StyledSelectField from "../StyledSelectField";
 import { ReactComponent as IcBulletNext } from "../../assets/icons/ic_bulletnext.svg";
 import styles from "../../styles/dashboard/index.module.scss";
+import { useHistory } from "react-router";
 
 function FormCreate() {
+  const history = useHistory();
   const formik = useFormik({
     initialValues: {},
   });
+
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
@@ -20,8 +23,12 @@ function FormCreate() {
           <StyledSelectField label={"Jenis Dokumen BC"} />
         </Stack>
         <Stack mt={3} justifyContent="flex-end" direction="row">
-          <button type="submit" className={styles.bootstrap_btn_save}>
-            <span>Save</span> <IcBulletNext />
+          <button
+            onClick={() => history.push("plb/add")}
+            type="submit"
+            className={styles.bootstrap_btn_save}
+          >
+            <span>Next</span> <IcBulletNext />
           </button>
         </Stack>
       </form>
