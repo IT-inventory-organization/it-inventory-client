@@ -1,54 +1,37 @@
-import { alpha, styled } from "@mui/system";
+import {
+  TextField as MuiTextField,
+  InputLabel as MuiInputLabel,
+} from "@mui/material";
+import { styled } from "@mui/system";
 import React from "react";
 
-function StyledTextField({ label, fullWidth, ...other }) {
+function StyledTextField(props) {
+  const { label, ...other } = props;
   return (
-    <InputWrapper style={{ width: fullWidth ? "100%" : "max-content" }}>
-      {label && <BootstrapLabel>{label}</BootstrapLabel>}
-      <BootstrapInput {...other} />
-    </InputWrapper>
+    <>
+      {label && <InputLabel>{label}</InputLabel>}
+      <TextField {...other} />
+    </>
   );
 }
 
 export default React.memo(StyledTextField);
 
-// Styled Component
-const InputWrapper = styled("div")(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  width: "100%",
+const InputLabel = styled(MuiInputLabel)(({ theme }) => ({
+  color: "black",
 }));
 
-const BootstrapLabel = styled("label")(({ theme }) => ({
-  fontSize: "1rem",
-  color: "#000",
-  marginBottom: theme.spacing(2),
-}));
+const TextField = styled(MuiTextField)(({ theme }) => ({
+  ".MuiOutlinedInput-root": {
+    fontSize: 16,
+    width: "auto",
+    borderRadius: 10,
 
-const BootstrapInput = styled("input")(({ theme }) => ({
-  width: "100%",
-  borderRadius: "10px",
-  border: "1px solid #D8DCF2",
-  outline: "none",
-  fontSize: 16,
-  position: "relative",
-  boxSizing: "border-box",
-  padding: "10px 12px",
-  transition: theme.transitions.create([
-    "border-color",
-    "background-color",
-    "box-shadow",
-  ]),
-  "*::placeholder": {
-    color: "#8d8ac7",
-    opacity: 1,
+    "& > fieldset": {
+      border: "1px solid #D8DCF2",
+    },
   },
-  "&:focus": {
-    boxShadow: `${alpha("#0C66CF", 0.25)} 0 0 0 0.2rem`,
-    borderColor: "#0C66CF",
+  ".MuiInputBase-input": {
+    padding: "10px 12px",
   },
 }));
-
-StyledTextField.defaultProps = {
-  fullWidth: true,
-};
