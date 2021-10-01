@@ -13,9 +13,14 @@ function FormCreate() {
     initialValues: {},
   });
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    history.push("/plb/add");
+  };
+
   return (
     <>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <Stack gap={2}>
           <StyledSelectField label={"Pengajuan Sebagai"} />
           <StyledSelectField label={"Diajukan Dikantor"} />
@@ -23,11 +28,7 @@ function FormCreate() {
           <StyledSelectField label={"Jenis Dokumen BC"} />
         </Stack>
         <Stack mt={3} justifyContent="flex-end" direction="row">
-          <button
-            onClick={() => history.push("plb/add")}
-            type="submit"
-            className={styles.bootstrap_btn_save}
-          >
+          <button type="submit" className={styles.bootstrap_btn_save}>
             <span>Next</span> <IcBulletNext />
           </button>
         </Stack>
