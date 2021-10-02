@@ -4,7 +4,7 @@ import EnchancedToolbar from "../EnchancedToolbar";
 import useTable from "../useTable";
 import { TableBody, TableRow, TableCell, MenuItem } from "@mui/material";
 import PBLDummy from "../../dummy/plbDummy.json";
-import LineApproval from "./LineApproval";
+import LineApproval from "../LineApproval";
 import MenuActions from "../MenuActions";
 import { ReactComponent as IcView } from "../../assets/icons/ic_view.svg";
 import { ReactComponent as IcDelete } from "../../assets/icons/ic_delete.svg";
@@ -42,18 +42,24 @@ function TablePLB({ handleOpenModal }) {
 
   const handleSearch = useCallback((e) => {
     let target = e.target.value;
-    setFilterFn({
-      fn: (items) => {
-        if (target.toLowerCase() == "") return items;
-        else
-          return items.filter((x) => {
-            return x.jenisInvetory
-              .toLowerCase()
-              .replace(/ /g, "")
-              .includes(target.toLowerCase().replace(/ /g, ""));
-          });
-      },
-    });
+    setTimeout(() => {
+      setFilterFn({
+        fn: (items) => {
+          if (target.toLowerCase() == "" || target.length < 3) return items;
+          else
+            return items.filter((x) => {
+              const keys = Object.keys(x);
+              return keys.some((k) => {
+                return x[k]
+                  .toString()
+                  .toLowerCase()
+                  .replace(/ /g, "")
+                  .includes(target.toLowerCase().replace(/ /g, ""));
+              });
+            });
+        },
+      });
+    }, 1500);
   }, []);
 
   return (
@@ -78,7 +84,7 @@ function TablePLB({ handleOpenModal }) {
                 <TableCell>{val.pengirim}</TableCell>
                 <TableCell>{val.penerima}</TableCell>
                 <TableCell>
-                  <LineApproval approval={val.jenisInvetory} />
+                  <LineApproval approval={val.jalur} />
                 </TableCell>
                 <TableCell>
                   <MenuActions placeholder={"Actions"}>
