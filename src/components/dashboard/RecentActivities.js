@@ -9,7 +9,7 @@ import {
 import React from "react";
 import WrapSection from "../WrapSection";
 import styles from "../../styles/dashboard/index.module.scss";
-import LineApproval from "../PLB/LineApproval";
+import LineApproval from "../LineApproval";
 
 function RecentActivities() {
   return (
