@@ -15,8 +15,8 @@ function StyledAutoCompletedField(props) {
         disablePortal
         freeSolo
         id="combo-box-demo"
-        value="The Shawshank Redemption"
-        onInputChange={(e, value) => console.log(value)}
+        autoHighlight
+        autoSelect
         options={top100Films}
         renderInput={(params) => (
           <>
@@ -25,6 +25,13 @@ function StyledAutoCompletedField(props) {
           </>
         )}
         getOptionLabel={(option) => `${option.name}`}
+        renderOption={(props, option) => {
+          return (
+            <Typography
+              {...props}
+            >{`${option.name} - ${option.year}`}</Typography>
+          );
+        }}
         {...other}
       />
     </>
