@@ -18,7 +18,7 @@ function StyledTextField(props) {
 export default React.memo(StyledTextField);
 
 const InputLabel = styled(MuiInputLabel)(({ theme }) => ({
-  color: "black",
+  // color: "black",
 }));
 
 const TextField = styled(MuiTextField)(({ theme }) => ({

@@ -1,5 +1,4 @@
 import React from "react";
-import { useFormik } from "formik";
 // import * as yup from "yup";
 import { Stack } from "@mui/material";
 import StyledSelectField from "../StyledSelectField";
@@ -9,9 +8,6 @@ import { useHistory } from "react-router";
 
 function FormCreate() {
   const history = useHistory();
-  const formik = useFormik({
-    initialValues: {},
-  });
 
   const handleSubmit = (e) => {
     e.preventDefault();

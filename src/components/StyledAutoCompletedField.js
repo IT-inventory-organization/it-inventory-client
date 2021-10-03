@@ -54,7 +54,7 @@ const TextField = styled(MuiTextField)(({ theme }) => ({
 }));
 
 const InputLabel = styled(MuiInputLabel)(({ theme }) => ({
-  color: "black",
+  // color: "black",
 }));
 
 const top100Films = [
